@@ -12,6 +12,7 @@
 - *Sequelize*
 - *Postgres*
 - *Json web tokens* - *Bcript*
+- *Nodemon*
 
 ### **React**
 
@@ -50,3 +51,8 @@
 # **Boilerplate**
 
 ![](https://i.pinimg.com/originals/19/c4/ea/19c4ea258a21c753f70bd55a08e5d9d4.jpg)
+
+sacar confirmar contraseña
+
+fotos / str
+

@@ -2,8 +2,9 @@
   "name": "back",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/IsaacManzo/Proyecto-profesional/issues"
   },
-  "homepage": "https://github.com/IsaacManzo/Proyecto-profesional#readme"
+  "homepage": "https://github.com/IsaacManzo/Proyecto-profesional#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.4"
+  }
 }
