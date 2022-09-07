@@ -4,20 +4,13 @@ const db = require("./db")
 
 const cors = require("cors")
 
-app.use(
-    cors({
-      origin: "http://localhost:3000",
-    //  credentials: true,
-    //  optionSuccessStatus: 200,
-    })
-  );
+app.use(cors());
 
 app.use(express.json())
 
 app.get("/", function (req, res){
     res.send("Pagina home")
 })
-
 
 db.sync({ force: false }).then(() => {
     console.log("Se conecto bien la db");
