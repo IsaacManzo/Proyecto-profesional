@@ -4,7 +4,7 @@
 
 - *React*
 - *Redux* - *Redux/Toolkit*
-- *Chakra UI*
+- *Styled components*
 
 ### *back-end:*
 
@@ -26,7 +26,7 @@
 
 ### **Chakra UI**
 
-**Chakra** **UI** es una biblioteca de componentes de interfaz de usuario para React. js que está diseñada para la accesibilidad.
+**Styled** **components** es una biblioteca de componentes de interfaz de usuario para React. js que está diseñada para la accesibilidad.
 
 ### **Express**
 
@@ -46,13 +46,8 @@
 
 # **Scheme design**
 
-![texto_alternativo](https://i.pinimg.com/originals/c0/2a/77/c02a77a1ed4604c3fb631ebd4d361714.jpg)
+![texto_alternativo](https://i.pinimg.com/originals/c2/3a/37/c23a37732a1b78b3daa9bbe9cfd43510.jpg)
 
 # **Boilerplate**
 
-![](https://i.pinimg.com/originals/19/c4/ea/19c4ea258a21c753f70bd55a08e5d9d4.jpg)
-
-sacar confirmar contraseña
-
-fotos / str
-
+![](https://i.pinimg.com/originals/a1/8c/2f/a18c2f6a6cd24a066676375bdaed8694.jpg)
