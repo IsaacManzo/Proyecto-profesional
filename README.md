@@ -2,21 +2,25 @@
 
 ### *front-end:*
 
-- *React*
+- *React* - *React-scripts*
 - *Redux* - *Redux/Toolkit*
 - *Styled components*
 
 ### *back-end:*
 
-- *Express*
-- *Sequelize*
+- *Express* 
+- *Sequelize* - *pg/postgress* - *pg-store*
 - *Postgres*
 - *Json web tokens* - *Bcript*
 - *Nodemon*
+- *Cookie-parser*
+- *Cors*
 
-### **React**
+
+### **React** - *React-scripts*
 
 **React** se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien.
+**React-scripts** Se usa para agregar los scripts como el npm start.
 
 ### **Redux - Redux/Toolkit**
 
@@ -24,7 +28,7 @@
 
 **Redux** **Toolkit** tiene como objetivo simplificar Redux con una abstracción conveniente sobre el «texto estándar».
 
-### **Chakra UI**
+### **Styled** **components**
 
 **Styled** **components** es una biblioteca de componentes de interfaz de usuario para React. js que está diseñada para la accesibilidad.
 
@@ -32,22 +36,24 @@
 
 **Express** lo utilizaremos para inicializar el servidor y parte de la configuracion.
 
-### **Sequelize**
+### **Sequelize** - **pg/postgress** - **pg-hstore**
 
-**Sequelize** sera la herramineta que usaremos para setear la db (base de datos).
-
-### **Postgres**
-
-**Postgres** lo utilizaremos para crear la db.
+Con la aplicacion **pgAdmin 4** de **pg**, cree la db (proyectoProfesional). **Sequelize** sera la herramineta que usaremos para setear la db (base de datos).
 
 ### **Json web token** - **Bcript** 
 
 **Json** **web** **token** y **Bcript** lo utilizaremos para la validacion de los tokens, para crearlos y para setear las cookies.
 
+### **Cookie-parser**
+
+### **Cors**
+
+Se usa para poder enviar data json desde el **back** al front, y que el front pueda traducir los datos y entendenrlos o cambiarles el formato a uno legible por el mismo.
+
 # **Scheme design**
 
-![texto_alternativo](https://i.pinimg.com/originals/c2/3a/37/c23a37732a1b78b3daa9bbe9cfd43510.jpg)
+![No cargo la imagen](https://i.pinimg.com/originals/c2/3a/37/c23a37732a1b78b3daa9bbe9cfd43510.jpg)
 
 # **Boilerplate**
 
-![](https://i.pinimg.com/originals/a1/8c/2f/a18c2f6a6cd24a066676375bdaed8694.jpg)
+![No cargo la imagen](https://i.pinimg.com/originals/a1/8c/2f/a18c2f6a6cd24a066676375bdaed8694.jpg)
