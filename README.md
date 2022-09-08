@@ -53,3 +53,19 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 # **Scheme design**
 
 ![No cargo la imagen](https://i.pinimg.com/564x/c7/07/b3/c707b3d1acab736c3c72df8539ba9e23.jpg)
+
+# **Mis pasos**
+
+* primero realice el armado de carpetas
+
+* luego instale las dependencias
+
+* inicialice el proyecto con react
+
+* cree la db en pgAdmin y la enlacecon sequielize
+
+* luego cree el primer modelo
+
+* despues cree la ruta y el controller de la ruta
+
+* prueba final de que la ruta anda
