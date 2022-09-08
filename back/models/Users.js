@@ -12,47 +12,31 @@ User.init(
         isEmail: true,
       },
     },
-  },
-  {
     nombre: {
       type: S.STRING,
       allowNull: false,
     },
-  },
-  {
     apellido: {
       type: S.STRING,
       allowNull: false,
     },
-  },
-  {
     contraseña: {
       type: S.STRING,
       allowNull: false,
     },
-  },
-  {
     salt: {
       type: S.STRING,
     },
-  },
-  {
     administrador: {
+      type: S.INTEGER,
+      defaultValue: false
+    },
+    numeroTelefono: {
       type: S.BOOLEAN,
-      defaultValue: false,
+      allowNull: false,
     },
   },
-  {
-    numeroTelefono:{
-        type: S.NUMBER,
-        allowNull: false
-    }
-  },
-  // Indicamos la db y le asiganmos un nombre al modelo
-  {
-    sequelize: db,
-    modelName: "user",
-  }
+  { sequelize: db, modelName: "user" }
 );
 
 module.exports = User;

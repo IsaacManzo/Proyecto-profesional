@@ -1,12 +1,15 @@
 const express = require("express")
 const app = express()
 const db = require("./db")
+const routes = require("./routes")
 
 const cors = require("cors")
 
+// Lectura de datos
 app.use(cors());
-
 app.use(express.json())
+
+app.use("/api", routes)
 
 app.get("/", function (req, res){
     res.send("Pagina home")
