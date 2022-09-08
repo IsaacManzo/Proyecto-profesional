@@ -52,4 +52,9 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 
 # **Scheme design**
 
-![No cargo la imagen](https://i.pinimg.com/originals/c2/3a/37/c23a37732a1b78b3daa9bbe9cfd43510.jpg)
+![No cargo la imagen](https://i.pinimg.com/564x/f3/ff/61/f3ff61011331d0346eb97c165625797c.jpg)
+
+# Cosas por hacer
+
+Dividir usuarios entre clientes y vendedores
+
