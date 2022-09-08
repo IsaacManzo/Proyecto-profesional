@@ -56,16 +56,16 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 
 # **Mis pasos**
 
-* primero realice el armado de carpetas
+* Primero realice el armado de carpetas
 
-* luego instale las dependencias
+* Luego instale las dependencias
 
-* inicialice el proyecto con react
+* Inicialice el proyecto con react
 
-* cree la db en pgAdmin y la enlacecon sequielize
+* Cree la db en pgAdmin y la enlacecon sequielize
 
-* luego cree el primer modelo
+* Luego cree el primer modelo
 
-* despues cree la ruta y el controller de la ruta
+* Despues cree la ruta y el controller de la ruta
 
-* prueba final de que la ruta anda
+* Prueba final de que la ruta anda
