@@ -1,9 +1,7 @@
 const User = require("../models/Users")
 
-const register = (req, res, next) => {
-  console.log(req.body)
+const register = (req, res) => {
     User.create(req.body).then((user) => {
-     // console.log(req.body)
       const payload = {
         email: user.email,
         nombre: user.nombre,
@@ -13,12 +11,7 @@ const register = (req, res, next) => {
         numeroTelefono: user.numeroTelefono
       };
       res.status(201).send(payload);
-    })
-};
-
-const login = (req, res) => {
-  const cont = req.body
-
+    }).catch()
 };
 
 module.exports = { register }

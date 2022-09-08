@@ -28,11 +28,11 @@ User.init(
       type: S.STRING,
     },
     administrador: {
-      type: S.INTEGER,
+      type: S.STRING,
       defaultValue: false
     },
     numeroTelefono: {
-      type: S.BOOLEAN,
+      type: S.INTEGER,
       allowNull: false,
     },
   },
