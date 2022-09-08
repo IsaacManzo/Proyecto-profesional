@@ -53,7 +53,3 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 # **Scheme design**
 
 ![No cargo la imagen](https://i.pinimg.com/originals/c2/3a/37/c23a37732a1b78b3daa9bbe9cfd43510.jpg)
-
-# **Boilerplate**
-
-![No cargo la imagen](https://i.pinimg.com/originals/a1/8c/2f/a18c2f6a6cd24a066676375bdaed8694.jpg)

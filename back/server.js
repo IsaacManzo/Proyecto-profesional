@@ -11,6 +11,7 @@ app.use(express.json())
 
 app.use("/api", routes)
 
+
 app.get("/", function (req, res){
     res.send("Pagina home")
 })
