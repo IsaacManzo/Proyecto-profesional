@@ -56,6 +56,8 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 
 # **Mis pasos**
 
+* Primero organice el README con las dependencias que iba a usar
+
 * Primero realice el armado de carpetas
 
 * Luego instale las dependencias
