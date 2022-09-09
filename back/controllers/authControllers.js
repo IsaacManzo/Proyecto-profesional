@@ -2,6 +2,7 @@ const User = require("../models/Users");
 const { generadorToken, validadorToken } = require("../config/tokens");
 const router = require("../routes");
 
+// ? CODIGO REGISTER
 const register = (req, res) => {
   User.create(req.body)
     .then((user) => {
@@ -19,6 +20,7 @@ const register = (req, res) => {
     .catch();
 };
 
+// ? CODIGO LOGIN
 const login = (req, res) => {
   const { email, contraseña } = req.body;
   User.findOne({ where: { email } }).then((user) => {
@@ -40,15 +42,22 @@ const login = (req, res) => {
   });
 };
 
-// ? Valida que el token sea del user logueado
+// ? CODIGO LOGOUT
+const logout = (req, res) =>{
+  res.clearCookie("token")
+  res.sendStatus(204)
+}
+
+// ? CODIGO VALIDA QUE EL TOKEN SEA DEL USER LOGEADO
 const secret = (req, res) => {
   const token = req.cookies.token;
   const { user } = validadorToken(token);
   res.send(user);
 };
 
+// ? CODIGO PERSISTE EL LOGEO DEL USER
 const me = (req, res) =>{
   res.sendStatus(404)
 }
 
-module.exports = { register, login, secret, me };
+module.exports = { register, login, logout, secret, me };
