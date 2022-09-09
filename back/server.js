@@ -1,13 +1,16 @@
 const express = require("express")
 const app = express()
 const db = require("./db")
+const cookieParser = require("cookie-parser")
 const routes = require("./routes")
-
 const cors = require("cors")
 
 // Lectura de datos
 app.use(cors());
 app.use(express.json())
+
+// Para manejar nuestras cookies
+app.use(cookieParser())
 
 app.use("/api", routes)
 

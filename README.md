@@ -71,3 +71,5 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 * Despues cree la ruta y el controller de la ruta
 
 * Prueba final de que la ruta anda
+
+* Arranque el hasheo de la contraseña, hook para modelo User y hasheo con bcrypt
