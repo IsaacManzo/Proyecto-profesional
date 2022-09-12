@@ -3,10 +3,13 @@ const bcrypt = require("bcrypt");
 const db = require("../db");
 
 class User extends S.Model {
+
+// ? HASHEA LA CONTRASEÑA Y AGREGA UN SALT
   hash(contraseña, salt) {
     return bcrypt.hash(contraseña, salt);
   }
 
+// ? VALIDA LA CONTRASEÑA DEL USUARIO
   validadorContraseña(contraseña) {
     return this.hash(contraseña, this.salt).then(
       (newHash) => newHash === this.contraseña
@@ -50,14 +53,13 @@ User.init(
   { sequelize: db, modelName: "user" }
 );
 
-// ? Hook que asigna el hash despues de que se registren en el cliente
+// ? HOOK QUE ASIGNA EL HAS DESPUES DE QUE SE REGIISTREN EN EL CLIENTE
 User.beforeCreate((user) => {
   const salt = bcrypt.genSaltSync();
   user.salt = salt;
   return user
     .hash(user.contraseña, salt)
     .then((hash) => {
-      // Retornamos el usuario con el hasheo realizado
       user.contraseña = hash;
     })
     .catch();
