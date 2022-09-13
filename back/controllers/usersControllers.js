@@ -2,28 +2,27 @@ const Casa = require("../models/Casas");
 
 // ? AGREGAR UNA CASA
 const agregarCasa = (req, res) => {
-  console.log("STRING", req.body.provincia)
   Casa.create(req.body)
-     .then((casa) => {
-    const payload = {
-      provincia: casa.provincia,
-      ciudad: casa.ciudad,
-      codigoPostal: casa.codigoPostal,
-      precio: casa.precio,
-      ambientes: casa.ambientes,
-      baños: casa.baños,
-      habitaciones: casa.habitaciones,
-      cochera: casa.cochera,
-      metrosCuadrados: casa.metrosCuadrados,
-      fotos: casa.fotos,
-      titulo: casa.titulo,
-      descripcion: casa.descripcion,
-      tipo: casa.tipo,
-      pisos: casa.pisos,
-    };
-    res.status(201).send(payload)
-  })
-  .catch()
+    .then((casa) => {
+      const payload = {
+        provincia: casa.provincia,
+        ciudad: casa.ciudad,
+        codigoPostal: casa.codigoPostal,
+        precio: casa.precio,
+        ambientes: casa.ambientes,
+        baños: casa.baños,
+        habitaciones: casa.habitaciones,
+        cochera: casa.cochera,
+        metrosCuadrados: casa.metrosCuadrados,
+        fotos: casa.fotos,
+        titulo: casa.titulo,
+        descripcion: casa.descripcion,
+        tipo: casa.tipo,
+        pisos: casa.pisos,
+      };
+      res.status(201).send(payload);
+    })
+    .catch();
 };
 
 // ? BORRAR UNA CASA

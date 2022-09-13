@@ -74,4 +74,8 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 
 * Arranque el hasheo de la contraseña, hook para modelo User y hasheo con bcrypt
 
-* Cree la ruta de logueo, deslogeo, persistencia de secion y ruta para validar al usuario
+* Cree la ruta de logueo, deslogeo, persistencia de login y ruta para validar al usuario
+
+* Configure jwt, cookies, tokens, SECRET, etc.
+
+* Rutas para admin, editar una casa, eliminar o agregar.

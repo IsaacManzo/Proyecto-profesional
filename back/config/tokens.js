@@ -16,6 +16,7 @@ const validadorToken = () => {
 function validadorAdmin(req, res, next) {
   const token = req.cookies.token;
   const check = jwt.verify(token, SECRET);
+  console.log(check.user.administrador);
   if (check.user.administrador === true) {
     next();
   } else res.sendStatus(401);
