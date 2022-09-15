@@ -8,6 +8,7 @@ const {
   secret,
   me,
 } = require("../controllers/authControllers");
+
 const { validadorAuth } = require("../middlewares/auth");
 
 // ! REGISTRO
