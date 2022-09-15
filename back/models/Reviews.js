@@ -5,17 +5,17 @@ class Review extends S.Model {}
 
 Review.init(
   {
-    fkUsuario: {
-      type: S.INTEGER,
-      allowNull: false,
-    },
-    fkCasa: {
-      type: S.INTEGER,
-      allowNull: false,
-    },
     reviews: {
       type: S.TEXT,
       allowNull: false,
+    },
+    rating: {
+      type: S.FLOAT,
+      validate: {
+        min: 0,
+        max: 10,
+      },
+      defaultValue: 0,
     },
   },
   { sequelize: db, modelName: "review" }

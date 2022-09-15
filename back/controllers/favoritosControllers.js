@@ -1,17 +1,9 @@
-const Favorito = require("../models/Favoritos");
 
 // ? AGREGA UN FAVORITO
 const agregarFav = (req, res) => {
-    console.log("req.body")
-  Favorito.create(req.body)
-    .then((favorito) => {
-      const payload = {
-        fkUsuario: favorito.fkUsuario,
-        fkCasa: favorito.fkCasa,
-      };
-      res.status(201).send(payload);
-    })
-    .catch();
+const userId = req.params.id
+const casaId = req.body
+console.log(userId, casaId)
 };
 
 // ? BORRA UN FAVORITO

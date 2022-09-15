@@ -3,13 +3,12 @@ const bcrypt = require("bcrypt");
 const db = require("../db");
 
 class User extends S.Model {
-
-// ? HASHEA LA CONTRASEÑA Y AGREGA UN SALT
+  // ? HASHEA LA CONTRASEÑA Y AGREGA UN SALT
   hash(contraseña, salt) {
     return bcrypt.hash(contraseña, salt);
   }
 
-// ? VALIDA LA CONTRASEÑA DEL USUARIO
+  // ? VALIDA LA CONTRASEÑA DEL USUARIO
   validadorContraseña(contraseña) {
     return this.hash(contraseña, this.salt).then(
       (newHash) => newHash === this.contraseña
@@ -22,9 +21,9 @@ User.init(
     email: {
       type: S.STRING,
       allowNull: false,
-     // validate: {
-     //   isEmail: true,
-     // },
+      validate: {
+        isEmail: true,
+      },
     },
     nombre: {
       type: S.STRING,

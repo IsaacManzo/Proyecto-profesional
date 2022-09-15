@@ -56,6 +56,11 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 
 # **Mis pasos**
 
+## **Primer semana**
+### Iniciando el back
+
+*README, CARPETAS, DEPENDENCIAS, INICIE REACT, CREE DB Y LEVANTE SERVER, CREE RUTA AUTH
+
 * Primero organice el README con las dependencias que iba a usar
 
 * Primero realice el armado de carpetas
@@ -72,10 +77,23 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 
 * Prueba final de que la ruta anda
 
+## **Segunda semana**
+### Terminando el back
+
+* TOKEN, RUTAS ADMIN, MODELOS, RELACIONES, TABLA INTERMEDIA FAVORITO, RUTAS FAVORITO
+
 * Arranque el hasheo de la contraseña, hook para modelo User y hasheo con bcrypt
 
 * Cree la ruta de logueo, deslogeo, persistencia de login y ruta para validar al usuario
 
 * Configure jwt, cookies, tokens, SECRET, etc.
 
+* Crear usuario, loguear deslogear (primer semana)
+
 * Rutas para admin, editar una casa, eliminar o agregar.
+
+* Cree todos los modelos
+
+* Tabla Favorito creada por relaciones
+
+* Probando las rutas de favoritos

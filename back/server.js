@@ -4,12 +4,13 @@ const db = require("./db");
 const cookieParser = require("cookie-parser");
 const routes = require("./routes");
 const cors = require("cors");
+require("./models")
 
-// Lectura de datos
+// ? LECTURA DE DATOS
 app.use(cors());
 app.use(express.json());
 
-// Para manejar nuestras cookies
+// ? COOKIE
 app.use(cookieParser());
 
 app.use("/api", routes);
