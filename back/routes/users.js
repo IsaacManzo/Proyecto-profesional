@@ -9,12 +9,12 @@ const {
 const { validadorAdmin } = require("../config/tokens");
 
 // ? AGREGAR UNA CASA COMO ADMINISTRADOR
-router.post("/agregarAdm", agregarCasa);
+router.post("/agregarAdm",validadorAdmin, agregarCasa);
 
 // ? BORRAR UNA CASA COMO ADMINISTRDOR
-router.put("/borrarAdm/:id", validadorAdmin, borrarCasa);
+router.put("/borrarAdm/:id",validadorAdmin, borrarCasa);
 
 // ? EDITAR UNA CASA COMO ADMINISTRADOR
-router.put("/editarAdm/:id", validadorAdmin, editarCasa);
+router.put("/editarAdm/:id",validadorAdmin, editarCasa);
 
 module.exports = router;

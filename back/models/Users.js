@@ -22,9 +22,9 @@ User.init(
     email: {
       type: S.STRING,
       allowNull: false,
-      validate: {
-        isEmail: true,
-      },
+     // validate: {
+     //   isEmail: true,
+     // },
     },
     nombre: {
       type: S.STRING,
@@ -42,7 +42,7 @@ User.init(
       type: S.STRING,
     },
     administrador: {
-      type: S.STRING,
+      type: S.BOOLEAN,
       defaultValue: false,
     },
     numeroTelefono: {

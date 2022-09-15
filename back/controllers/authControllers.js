@@ -13,7 +13,6 @@ const register = (req, res) => {
         administrador: user.administrador,
         numeroTelefono: user.numeroTelefono,
       };
-      console.log(user);
       res.status(201).send(payload);
     })
     .catch();
