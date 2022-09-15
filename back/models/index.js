@@ -16,7 +16,7 @@ Casa.hasMany(Review)
 
 
 // ? USER
-User.belongsToMany(Casa, {through: "favoritos"}) // through crea una tabla en base a la relacion de users y casa, recibiendo sus respectivos ID
+User.belongsToMany(Casa, {through: "favoritos"}) //  through crea una tabla en base a la relacion de users y casa, recibiendo sus respectivos ID
 User.hasMany(Review)
 
 

@@ -52,7 +52,7 @@ User.init(
   { sequelize: db, modelName: "user" }
 );
 
-// ? HOOK QUE ASIGNA EL HAS DESPUES DE QUE SE REGIISTREN EN EL CLIENTE
+// ? HOOK GENERA SALT
 User.beforeCreate((user) => {
   const salt = bcrypt.genSaltSync();
   user.salt = salt;

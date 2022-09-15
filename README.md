@@ -80,7 +80,7 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 ## **Segunda semana**
 ### Terminando el back
 
-* TOKEN, RUTAS ADMIN, MODELOS, RELACIONES, TABLA INTERMEDIA FAVORITO, RUTAS FAVORITO
+* TOKEN, RUTAS ADMIN, MIDDLEWARES, MODELOS, RELACIONES, TABLA INTERMEDIA FAVORITO, RUTAS FAVORITO
 
 * Arranque el hasheo de la contraseña, hook para modelo User y hasheo con bcrypt
 

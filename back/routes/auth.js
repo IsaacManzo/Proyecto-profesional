@@ -9,6 +9,8 @@ const {
 } = require("../controllers/authControllers");
 const { validadorAuth } = require("../middlewares/auth");
 
+// ! REGISTRO
+
 // ? REGISTER
 router.post("/register", register);
 
