@@ -1,6 +1,7 @@
 const Casa = require("../models/Casas");
 
 // ? AGREGAR UNA CASA
+// no repetirse
 const agregarCasa = (req, res) => {
   Casa.create(req.body)
     .then((casa) => {
@@ -50,10 +51,12 @@ const editarCasa = (req, res, next) => {
     .then((result) => {
       const casaActualizada = result[1];
       res.json({
+       // siempre aclarar lo que se devuelve
         message: "Se actualizo correctamente",
         casaActualizada,
       });
     })
+    // siempre aclarar lo que se devuelve
     .catch(next);
 };
 
