@@ -9,8 +9,8 @@
 ### *back-end:*
 
 - *Express* 
-- *Sequelize* - *pg/postgress* - *pg-store*
-- *Postgres*
+- *Sequelize* 
+- *Postgres* - *pg/postgress* - *pg-store*
 - *Json web tokens* - *Bcript*
 - *Nodemon*
 - *Cookie-parser*
