@@ -2,7 +2,7 @@
 // ? AGREGA UN FAVORITO
 const agregarFav = (req, res) => {
 const userId = req.params.id
-const casaId = req.body
+const casaId = req.body// hola asdasd qwd 
 console.log(userId, casaId)
 };
 
