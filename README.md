@@ -46,6 +46,8 @@ Con la aplicacion **pgAdmin 4** de **pg**, cree la db (proyectoProfesional). **S
 
 ### **Cookie-parser**
 
+Cookie-parser analiza el encabezado Cookie y rellena req. cookies con objeto marcado con los nombres de las cookies.
+
 ### **Cors**
 
 Se usa para poder enviar data json desde el **back** al front, y que el front pueda traducir los datos y entendenrlos o cambiarles el formato a uno legible por el mismo.
