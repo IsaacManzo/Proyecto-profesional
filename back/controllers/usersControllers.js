@@ -1,4 +1,7 @@
+const { User } = require("../models");
 const Casa = require("../models/Casas");
+
+// ! ADMINISTRADOR
 
 // ? AGREGAR UNA CASA
 // no repetirse
@@ -51,7 +54,7 @@ const editarCasa = (req, res, next) => {
     .then((result) => {
       const casaActualizada = result[1];
       res.json({
-       // siempre aclarar lo que se devuelve
+        // siempre aclarar lo que se devuelve
         message: "Se actualizo correctamente",
         casaActualizada,
       });
@@ -60,4 +63,46 @@ const editarCasa = (req, res, next) => {
     .catch(next);
 };
 
-module.exports = { borrarCasa, editarCasa, agregarCasa };
+// ! FAVORITOS
+
+// ? AGREGA UN FAVORITO
+const agregarFav = (req, res) => {
+  User.findByPk(req.params.id).then((user) => {
+    console.log("USER", user);
+    Casa.findByPk(req.body.id)
+      .then((casa) => {
+        console.log("CASA", casa);
+        user.addFavoritos(casa);
+      })
+  }).catch((err)=>console.log("ERROR", err))
+  res.send({ message: "Agregado a favoritos" });
+};
+
+// ? BORRA UN FAVORITO
+const borrarFav = (req, res, next) => {
+  Favoritos.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then(() => {
+      res.sendStatus(204);
+    })
+    .catch(next);
+};
+
+// ? TRAE TODOS LOS FAVORITOS
+const todosFav = (req, res, next) => {
+  Favoritos.findAll()
+    .then((favorito) => res.status(200).send(favorito))
+    .catch(next);
+};
+
+module.exports = {
+  agregarFav,
+  borrarFav,
+  todosFav,
+  borrarCasa,
+  editarCasa,
+  agregarCasa,
+};

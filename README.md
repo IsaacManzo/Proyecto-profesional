@@ -16,7 +16,6 @@
 - *Cookie-parser*
 - *Cors*
 
-
 ### **React** - *React-scripts*
 
 **React** se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien.
@@ -46,6 +45,8 @@ Con la aplicacion **pgAdmin 4** de **pg**, cree la db (proyectoProfesional). **S
 
 ### **Cookie-parser**
 
+Cookie-parser analiza el encabezado Cookie y rellena req. cookies con objeto marcado con los nombres de las cookies.
+
 ### **Cors**
 
 Se usa para poder enviar data json desde el **back** al front, y que el front pueda traducir los datos y entendenrlos o cambiarles el formato a uno legible por el mismo.
@@ -61,39 +62,39 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 
 *README, CARPETAS, DEPENDENCIAS, INICIE REACT, CREE DB Y LEVANTE SERVER, CREE RUTA AUTH
 
-* Primero organice el README con las dependencias que iba a usar
+*Primero organice el README con las dependencias que iba a usar
 
-* Primero realice el armado de carpetas
+*Primero realice el armado de carpetas
 
-* Luego instale las dependencias
+*Luego instale las dependencias
 
-* Inicialice el proyecto con react
+*Inicialice el proyecto con react
 
-* Cree la db en pgAdmin y la enlacecon sequielize
+*Cree la db en pgAdmin y la enlacecon sequielize
 
-* Luego cree el primer modelo
+*Luego cree el primer modelo
 
-* Despues cree la ruta y el controller de la ruta
+*Despues cree la ruta y el controller de la ruta
 
-* Prueba final de que la ruta anda
+*Prueba final de que la ruta anda
 
 ## **Segunda semana**
 ### Terminando el back
 
-* TOKEN, RUTAS ADMIN, MIDDLEWARES, MODELOS, RELACIONES, TABLA INTERMEDIA FAVORITO, RUTAS FAVORITO
+*TOKEN, RUTAS ADMIN, MIDDLEWARES, MODELOS, RELACIONES, TABLA INTERMEDIA FAVORITO, RUTAS FAVORITO
 
-* Arranque el hasheo de la contraseña, hook para modelo User y hasheo con bcrypt
+*Arranque el hasheo de la contraseña, hook para modelo User y hasheo con bcrypt
 
-* Cree la ruta de logueo, deslogeo, persistencia de login y ruta para validar al usuario
+*Cree la ruta de logueo, deslogeo, persistencia de login y ruta para validar al usuario
 
-* Configure jwt, cookies, tokens, SECRET, etc.
+*Configure jwt, cookies, tokens, SECRET, etc.
 
-* Crear usuario, loguear deslogear (primer semana)
+*Crear usuario, loguear deslogear (primer semana)
 
-* Rutas para admin, editar una casa, eliminar o agregar.
+*Rutas para admin, editar una casa, eliminar o agregar
 
-* Cree todos los modelos
+*Cree todos los modelos
 
-* Tabla Favorito creada por relaciones
+*Tabla Favorito creada por relaciones
 
-* Probando las rutas de favoritos
+*Probando las rutas de favoritos
