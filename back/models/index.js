@@ -5,8 +5,12 @@ const User = require("../models/Users")
 
 // ! RELACIONES
 
+// ? USER
+User.belongsToMany(Casa, {as:"favoritos",through: "favoritos_casas"})  
+User.hasMany(Review)
+
 // ? CASA
-Casa.belongsToMany(User, {through: "favoritos"}) // * through: crea una tabla en base a la relacion de users y casa, recibiendo sus respectivos ID
+Casa.belongsToMany(User, {as: "users",through: "favoritos_casas"})
 Casa.hasMany(Review)
 
 // ? CITA
@@ -16,9 +20,5 @@ Cita.belongsTo(Casa)
 // ? REVIEW
 Review.belongsTo(User)
 Review.belongsTo(Casa)
-
-// ? USER
-User.belongsToMany(Casa, {through: "favoritos"}) // * through: crea una tabla en base a la relacion de users y casa, recibiendo sus respectivos ID
-User.hasMany(Review)
 
 module.exports = { Casa, Cita, Review, User }

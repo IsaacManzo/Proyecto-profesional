@@ -28,9 +28,9 @@ router.put("/editarAdm/:id", validadorAdmin, editarCasa);
 router.put("/agregarFav/:id", agregarFav);
 
 // ? BORRAR UN FAVORITO
-router.put("/borrarFav", borrarFav);
+router.put("/borrarFav/:id", borrarFav);
 
 // ? TRAER TODOS LOS FAVORITOS DE UN USUARIO
-router.get("/todosFavoritos", todosFav);
+router.post("/todosFav/:id", todosFav);
 
 module.exports = router;
