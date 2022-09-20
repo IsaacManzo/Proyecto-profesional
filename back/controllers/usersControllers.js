@@ -67,9 +67,7 @@ const editarCasa = (req, res, next) => {
 const agregarFav = (req, res) => {
   User.findByPk(req.params.id)
     .then((user) => {
-      console.log("USER", user);
       Casa.findByPk(req.body.id).then((casa) => {
-        console.log("CASA", casa);
         user.addFavoritos(casa);
       });
     })
@@ -79,22 +77,24 @@ const agregarFav = (req, res) => {
 
 // ? BORRA UN FAVORITO
 const borrarFav = (req, res, next) => {
-  Favoritos.destroy({
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then(() => {
-      res.sendStatus(204);
+  User.findByPk(req.params.id)
+    .then((user) => {
+      Casa.findByPk(req.body.id).then((casa) => {
+        user.removeFavoritos(casa);
+      });
     })
-    .catch(next);
+    .catch((err) => console.log("ERROR", err));
+  res.send({ message: "Favoritos borrado correctamente" });
 };
 
 // ? TRAE TODOS LOS FAVORITOS
 const todosFav = (req, res, next) => {
-  Favoritos.findAll()
-    .then((favorito) => res.status(200).send(favorito))
-    .catch(next);
+  User.findByPk(req.params.id)
+    .then(async (user) => {
+      const result = await user.getFavoritos();
+      res.send(result);
+    })
+    .catch((err) => console.log("ERROR", err));
 };
 
 module.exports = {
