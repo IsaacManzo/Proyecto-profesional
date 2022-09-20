@@ -54,12 +54,10 @@ const editarCasa = (req, res, next) => {
     .then((result) => {
       const casaActualizada = result[1];
       res.json({
-        // siempre aclarar lo que se devuelve
         message: "Se actualizo correctamente",
         casaActualizada,
       });
     })
-    // siempre aclarar lo que se devuelve
     .catch(next);
 };
 
@@ -67,14 +65,15 @@ const editarCasa = (req, res, next) => {
 
 // ? AGREGA UN FAVORITO
 const agregarFav = (req, res) => {
-  User.findByPk(req.params.id).then((user) => {
-    console.log("USER", user);
-    Casa.findByPk(req.body.id)
-      .then((casa) => {
+  User.findByPk(req.params.id)
+    .then((user) => {
+      console.log("USER", user);
+      Casa.findByPk(req.body.id).then((casa) => {
         console.log("CASA", casa);
         user.addFavoritos(casa);
-      })
-  }).catch((err)=>console.log("ERROR", err))
+      });
+    })
+    .catch((err) => console.log("ERROR", err));
   res.send({ message: "Agregado a favoritos" });
 };
 
