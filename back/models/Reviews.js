@@ -9,14 +9,14 @@ Review.init(
       type: S.TEXT,
       allowNull: false,
     },
-    rating: {
-      type: S.FLOAT,
-      validate: {
-        min: 0,
-        max: 10,
-      },
-      defaultValue: 0,
-    },
+   //rating: {
+   //   type: S.FLOAT,
+   //   validate: {
+   //     min: 0,
+   //     max: 10,
+   //   },
+   //   defaultValue: 0,
+   // ,
   },
   { sequelize: db, modelName: "review" }
 );
