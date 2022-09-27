@@ -42,7 +42,7 @@ User.init(
     },
     administrador: {
       type: S.BOOLEAN,
-      defaultValue: false,
+      defaultValue: true,
     },
     numeroTelefono: {
       type: S.INTEGER,
