@@ -1,6 +1,6 @@
 import React from "react";
 import Carrusel from "../commons/Carrusel";
-import Preguntas from "../commons/Preguntas";
+import Preguntas from "../commons/Preguntas"
 
 const Home = () => {
   return (

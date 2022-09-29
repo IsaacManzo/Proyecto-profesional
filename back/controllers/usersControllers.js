@@ -61,6 +61,13 @@ const editarCasa = (req, res, next) => {
     .catch(next);
 };
 
+// ? RUTA PARA TRAER TODAS LAS CASAS
+const traerCasas = (req, res, next) => {
+  Casa.findAll()
+    .then((casas) => res.status(200).send(casas))
+    .catch(next);
+};
+
 // ! FAVORITOS
 
 // ? AGREGA UN FAVORITO
@@ -104,4 +111,5 @@ module.exports = {
   borrarCasa,
   editarCasa,
   agregarCasa,
+  traerCasas,
 };

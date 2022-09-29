@@ -98,3 +98,25 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 *Tabla Favorito creada por relaciones
 
 *Probando las rutas de favoritos
+
+## **Tercerca semana**
+###  Back y front
+
+*RUTA FAVORITOS AGREGAR, RUTAS REVIEW, ARRANCANDO FRONT
+
+*Termine las rutas de favoritos
+
+*Arme las rutas de review
+
+*Arme las carpetas de front
+
+*Cree componente Registro y le agregue estilos
+
+## **Cuarta semana**
+### Front y enlace al back
+
+*COMPONENTES,ESTILOS, AXIOS, REDIRECCION DE BOTONES, ENLACE DE RUTAS CON REACT-ROUTER, CONFIGURACION DE BOTONES, 
+
+*Cree componentes y commons
+
+*Enlace el registro con axios para que llegue la data a la db

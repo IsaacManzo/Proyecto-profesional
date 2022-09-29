@@ -5,6 +5,7 @@ const {
   borrarCasa,
   editarCasa,
   agregarCasa,
+  traerCasas,
   agregarFav,
   borrarFav,
   todosFav,
@@ -14,13 +15,16 @@ const { validadorAdmin } = require("../config/tokens");
 // ! ADMINISTRADOR
 // cambiar nombre de las rutas, agregarAdm => agregar_adm
 // ? AGREGAR UNA CASA COMO ADMINISTRADOR
-router.post("/agregarAdm", validadorAdmin, agregarCasa);
+router.post("/agregarAdm", agregarCasa);
 
 // ? BORRAR UNA CASA COMO ADMINISTRDOR
-router.put("/borrarAdm/:id", validadorAdmin, borrarCasa);
+router.put("/borrarAdm/:id", borrarCasa);
 
 // ? EDITAR UNA CASA COMO ADMINISTRADOR
 router.put("/editarAdm/:id", validadorAdmin, editarCasa);
+
+// ? TRAER TODAS LAS CASAS
+router.get("/traerAdm", traerCasas)
 
 // ! FAVORITOS
 

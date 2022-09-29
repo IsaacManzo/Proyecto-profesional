@@ -3,27 +3,21 @@ import "../componentsCss/Footer.css";
 
 const Footer = () => {
   return (
-    <div class="footer-basic m-4">
+    <div className="footer-basic">
       <footer>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Home</a>
+        <ul className="list-inline">
+          <li className="list-inline-item">
+            <a href="/home">Home</a>
           </li>
-          <li class="list-inline-item">
-            <a href="#">Services</a>
+          <li className="list-inline-item">
+            <a href="/register">Registrate</a>
           </li>
-          <li class="list-inline-item">
-            <a href="#">About</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Privacy Policy</a>
+          <li className="list-inline-item">
+            <a href="/login">Logueate</a>
           </li>
         </ul>
-        <p class="copyright">Company Name © 2018</p>
-      </footer>
+        <p className="copyright">Isaac Manzo © 2022</p>
+      </footer> 
     </div>
   );
 };

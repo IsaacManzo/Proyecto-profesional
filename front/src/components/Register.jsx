@@ -11,7 +11,7 @@ const Register = () => {
 
   const handleSubmit = function (e) {
     e.preventDefault();
-    const numeroTelefono = parseInt(telefono)
+    const numeroTelefono = parseInt(telefono);
     axios
       .post("http://localhost:3001/api/auth/register", {
         email,
@@ -20,11 +20,7 @@ const Register = () => {
         contraseña,
         numeroTelefono,
       })
-      .then((userData) => {
-        if(userData){
-          
-        }
-      })
+      .then((userData) => {})
       .catch();
   };
 
