@@ -115,8 +115,20 @@ Se usa para poder enviar data json desde el **back** al front, y que el front pu
 ## **Cuarta semana**
 ### Front y enlace al back
 
-*COMPONENTES,ESTILOS, AXIOS, REDIRECCION DE BOTONES, ENLACE DE RUTAS CON REACT-ROUTER, CONFIGURACION DE BOTONES, 
+*COMPONENTES,ESTILOS, AXIOS, REDIRECCION DE BOTONES, ENLACE DE RUTAS CON REACT-ROUTER, CREACION DE PAGINAS,CONFIGURACION DE BOTONES 
 
 *Cree componentes y commons
 
 *Enlace el registro con axios para que llegue la data a la db
+
+*Cree las rutas del front en App.js
+
+*Enlace los botones para la redireccion de rutas
+
+*Funciones de admin
+
+*Pagina home
+
+*Pagina registro y logueo
+
+*Grilla de casas

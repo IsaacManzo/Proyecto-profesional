@@ -15,6 +15,9 @@ const Footer = () => {
           <li className="list-inline-item">
             <a href="/login">Logueate</a>
           </li>
+          <li className="list-inline-item">
+            <a href="/grid">Propiedades</a>
+          </li>
         </ul>
         <p className="copyright">Isaac Manzo © 2022</p>
       </footer> 
