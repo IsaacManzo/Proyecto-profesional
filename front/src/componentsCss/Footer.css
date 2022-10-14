@@ -1,7 +1,9 @@
 .footer-basic {
-    padding:40px 0;
+    padding:20px;
     background-color:#ffffff;
     color:#4b4c4d;
+    bottom: 0;
+    width: 100%;
   }
   
   .footer-basic ul {
@@ -27,31 +29,8 @@
     opacity:1;
   }
   
-  .footer-basic .social {
-    text-align:center;
-    padding-bottom:25px;
-  }
-  
-  .footer-basic .social > a {
-    font-size:24px;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    display:inline-block;
-    text-align:center;
-    border-radius:50%;
-    border:1px solid #ccc;
-    margin:0 8px;
-    color:inherit;
-    opacity:0.75;
-  }
-  
-  .footer-basic .social > a:hover {
-    opacity:0.9;
-  }
-  
   .footer-basic .copyright {
-    margin-top:15px;
+    margin-top: auto;
     text-align:center;
     font-size:13px;
     color:#aaa;

@@ -7,19 +7,19 @@ const Footer = () => {
       <footer>
         <ul className="list-inline">
           <li className="list-inline-item">
-            <a href="/home">Home</a>
+            <button type="button" className="btn btn-outline-secondary"  href="/home">Home</button>
           </li>
           <li className="list-inline-item">
-            <a href="/register">Registrate</a>
+            <button type="button" className="btn btn-outline-secondary" href="/register">Registrate</button>
           </li>
           <li className="list-inline-item">
-            <a href="/login">Logueate</a>
+            <button type="button" className="btn btn-outline-secondary" href="/login">Logueate</button>
           </li>
           <li className="list-inline-item">
-            <a href="/grid">Propiedades</a>
+            <button type="button" className="btn btn-outline-secondary" href="/grid">Propiedades</button>
           </li>
         </ul>
-        <p className="copyright">Isaac Manzo © 2022</p>
+        <p className="copyright pt-2">Isaac Manzo © 2022</p>
       </footer> 
     </div>
   );
