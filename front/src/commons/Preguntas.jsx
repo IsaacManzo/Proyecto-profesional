@@ -1,7 +1,9 @@
 import React from "react";
+import "../componentsCss/Preguntas.css"
 
 const Preguntas = () => {
   return (
+    <div className="btn-preguntas">
     <div className="accordion m-4" id="accordionPanelsStayOpenExample">
         <h1 className="text-center m-4">Presentación</h1>
       <div className="accordion-item">
@@ -94,6 +96,7 @@ const Preguntas = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -1,28 +1,18 @@
 import React from "react";
 
 const Navbar = () => {
+
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/preguntas">
-          ProyectoIntegrador
+        <a className="navbar-brand">
+          <b>Antezana</b> <font color="grey">inmobiliaria</font>
         </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/home">
-                Home
+                <b>Home</b>
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -33,17 +23,32 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Propiedades
+                <font color="grey">Propiedades</font>
               </a>
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="/grid">
-                    Casas
+                  <font color="grey">Casa</font>
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/casa">
-                    Casa
+                  <a className="dropdown-item" href="/grid">
+                  <font color="grey">Duplex</font>
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/grid">
+                  <font color="grey">Departamento</font>
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/grid">
+                  <font color="grey">Oficina</font>
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="/grid">
+                  <font color="grey">Local</font>
                   </a>
                 </li>
               </ul>
@@ -56,22 +61,17 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Admin
+               <font color="grey">Admin</font>
               </a>
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="/adminAgregar">
-                    Agregar casa
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/adminBorrar">
-                    Borrar casa
+                  <font color="grey">Agregar Casa</font>
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/adminEditar">
-                    Editar casa
+                  <font color="grey">Editar Casa</font>
                   </a>
                 </li>
               </ul>
@@ -84,7 +84,7 @@ const Navbar = () => {
               placeholder="¿Qué desea buscar?"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
+            <button className="btn btn-outline-secondary" type="submit">
               Buscar
             </button>
           </form>
