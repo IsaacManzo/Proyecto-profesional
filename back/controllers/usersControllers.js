@@ -61,6 +61,14 @@ const editarCasa = (req, res, next) => {
     .catch(next);
 };
 
+// ? RUTA PARA TRAER UNA CASA
+const traerUnaCasa = (req, res, next) => {
+  const id = req.params.id;
+  Casa.findByPk(id)
+    .then((casa) => res.status(200).send(casa))
+    .catch(next);
+};
+
 // ? RUTA PARA TRAER TODAS LAS CASAS
 const traerCasas = (req, res, next) => {
   Casa.findAll()
@@ -111,5 +119,6 @@ module.exports = {
   borrarCasa,
   editarCasa,
   agregarCasa,
+  traerUnaCasa,
   traerCasas,
 };

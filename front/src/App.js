@@ -22,7 +22,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="grid" element={<Grid />} />        
         <Route path="preguntas" element={<Preguntas />} />
-        <Route path="casa" element={<Casas />} />
+        <Route path="casa/:id" element={<Casas />} />
         <Route path="adminAgregar" element={<AdminAgregar />}/>
         <Route path="adminBorrar" element={<AdminBorrar />}/>
         <Route path="adminEditar" element={<AdminEditar />}/>

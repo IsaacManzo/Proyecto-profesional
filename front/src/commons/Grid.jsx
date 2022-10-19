@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Casas from "./Casas";
-import "../componentsCss/Grid.css"
+import {useNavigate} from "react-router-dom"
+import "../componentsCss/Grid.css";
 
 const Grid = () => {
   const [casa, setCasa] = useState([]);
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios.get("http://localhost:3001/api/users/traerAdm").then((casas) => {
@@ -17,7 +18,7 @@ const Grid = () => {
       {casa?.map((elemento) => (
         <div className="card" style={{ width: "18rem" }}>
           <img
-            src="http://planosycasas.net/wp-content/uploads/2015/11/Plano-de-casas-grandes-y-modernas.jpg"
+            src={elemento.fotos}
             className="card-img-top"
             alt="..."
           />
@@ -34,7 +35,7 @@ const Grid = () => {
             <li className="list-group-item">💲 Precio: ${elemento.precio}</li>
           </ul>
           <div className="card-body">
-            <button type="button" class="btn btn-info" href="/casa">
+            <button type="button" class="btn btn-info" onClick={()=>navigate(`/casa/${elemento.id}`)}>
               Info
             </button>
           </div>
