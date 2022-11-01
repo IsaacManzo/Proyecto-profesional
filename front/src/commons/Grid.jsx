@@ -21,7 +21,7 @@ const handleSubmit = function (id) {
   return (
     <div>
       {casa?.map((elemento) => (
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card" style={{ width: "18rem" }} key={elemento.id}>
           <img
             src={elemento.fotos}
             className="card-img-top"
