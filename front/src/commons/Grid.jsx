@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom"
 import "../componentsCss/Grid.css";
-
+//hola
 const Grid = () => {
   const [casa, setCasa] = useState([]);
   const navigate = useNavigate()
