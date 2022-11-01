@@ -35,23 +35,23 @@ const Casas = () => {
                   <div className="col-sm-6">Ambientes: {elemento.ambientes}</div>
                 </div>
                 <div className="row py-2">
-                  <div className="col-sm-6">Baños: ${elemento.baños}</div>
+                  <div className="col-sm-6">Baños: {elemento.baños}</div>
                   <div className="col-sm-6">Habitaciones: {elemento.habitaciones}</div>
                 </div>
                 <div className="row py-2">
-                  <div className="col-sm-6">Cochera: ${elemento.cochera}</div>
-                  <div className="col-sm-6">Metros cuadrados: {elemento.metrosCuadrados}</div>
+                  <div className="col-sm-6">Cochera: {elemento.cochera}</div>
+                  <div className="col-sm-6">Metros cuadrados: {elemento.metrosCuadrados} m²</div>
                 </div>
                 <div className="row py-2">
-                  <div className="col-sm-6">Tipo: ${elemento.tipo}</div>
-                  <div className="col-sm-6">pisos: {elemento.pisos}</div>
+                  <div className="col-sm-6">Tipo: {elemento.tipo}</div>
+                  <div className="col-sm-6">Plantas: {elemento.pisos}</div>
                 </div>
                 <div className="row py-2">
-                  <div className="col-sm-6">Provincia: ${elemento.provincia}</div>
+                  <div className="col-sm-6">Provincia: {elemento.provincia}</div>
                   <div className="col-sm-6">Ciudad: {elemento.ciudad}</div>
                 </div>
                 <div className="row py-2">
-                  <div className="col-xs-12">Codigo postal: ${elemento.codigoPostal}</div>
+                  <div className="col-xs-12">Codigo postal: {elemento.codigoPostal}</div>
                 </div>
               </div>
             </div>

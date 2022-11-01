@@ -1,12 +1,13 @@
 import React from "react";
+import 'animate.css';
 
 const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand">
-          <b>Antezana</b> <font color="grey">inmobiliaria</font>
+        <a className="navbar-brand animate__animated animate__flipInX">
+          <h3><b>Antezana</b> <font color="grey">inmobiliaria</font></h3>
         </a>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
