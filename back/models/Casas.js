@@ -42,7 +42,7 @@ Casa.init(
       allowNull: false,
     },
     fotos: {
-      type: S.STRING,
+      type: S.TEXT,
       allowNull: false,
     },
     titulo: {
