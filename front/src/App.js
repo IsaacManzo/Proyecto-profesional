@@ -25,6 +25,7 @@ function App() {
         <Route path="adminAgregar" element={<AdminAgregar />}/>
         <Route path="adminEditar" element={<AdminEditar />}/>
       </Routes>
+      <Footer />
     </div>
   );
 }

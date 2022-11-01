@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^2.3.6",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@googlemaps/react-wrapper": "^1.1.35",
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -11,6 +14,7 @@
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
+    "framer-motion": "^7.6.3",
     "heroicons-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
