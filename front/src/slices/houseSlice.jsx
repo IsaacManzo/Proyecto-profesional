@@ -1,10 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = [
-  axios.get("http://localhost:3001/api/users/traerAdm")
-  .then((casas) => {return(casas.data);}),
-];
+async function resp() {
+  try {
+    const casa = await axios.get("http://localhost:3001/api/users/traerAdm");
+    console.log("CASA", casa.data);
+    return casa.data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+
+
+
+const initialState = [resp()];
+
 
 export const houseSlice = createSlice({
   name: "house",
