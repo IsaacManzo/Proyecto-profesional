@@ -23,7 +23,7 @@ const Casas = () => {
     <div>
       {singleCasa?.map((elemento) => (
         <div className="container py-2">
-          <div className="card" style={{ width: "30rem" }}>
+          <div className="card" style={{ width: "30rem" }} key={elemento.id}>
             <img src={elemento.fotos} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{elemento.titulo}</h5>
