@@ -20,6 +20,7 @@ import axios from "axios";
 //   }
 // ]
 
+
 export const house = createAsyncThunk('GET_HOUSE', ()=>{
   return axios.get(`http://localhost:3001/api/users/traerAdm`).then(res=> res.data)
 } )
