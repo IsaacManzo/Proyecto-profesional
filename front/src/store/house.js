@@ -20,13 +20,17 @@ import axios from "axios";
 //   }
 // ]
 
-
-export const house = createAsyncThunk('GET_HOUSE', ()=>{
-  return axios.get(`http://localhost:3001/api/users/traerAdm`).then(res=> res.data)
-} )
+export const house = createAsyncThunk("GET_HOUSE", async () => {
+ try {
+   const res = await axios.get(`http://localhost:3001/api/users/traerAdm`);
+   return res.data;
+ } catch (err) {
+  console.log(err);
+ }
+});
 
 const houseReducer = createReducer([], {
   [house.fulfilled]: (state, action) => action.payload,
-})
+});
 
-export default houseReducer
+export default houseReducer;

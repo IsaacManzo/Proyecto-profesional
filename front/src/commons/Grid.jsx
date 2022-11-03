@@ -2,16 +2,20 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom"
 import "../componentsCss/Grid.css";
-//hola
-const Grid = () => {
-  const [casa, setCasa] = useState([]);
-  const navigate = useNavigate()
+import { useSelector } from "react-redux"
 
-  useEffect(() => {
-    axios.get("http://localhost:3001/api/users/traerAdm").then((casas) => {
-      setCasa(casas.data);
-    });
-  }, []);
+
+const Grid = () => {
+  // const [casa, setCasa] = useState([]);
+  const navigate = useNavigate()
+  const house = useSelector((state) => state.house)
+
+
+  // useEffect(() => {
+  //   axios.get("http://localhost:3001/api/users/traerAdm").then((casas) => {
+  //     setCasa(casas.data);
+  //   });
+  // }, []);
 
 const handleSubmit = function (id) {
   id.preventdefault()
@@ -20,7 +24,7 @@ const handleSubmit = function (id) {
 
   return (
     <div>
-      {casa?.map((elemento) => (
+      {house?.map((elemento) => (
         <div className="card" style={{ width: "18rem" }} key={elemento.id}>
           <img
             src={elemento.fotos}
