@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import houseSlice from "../slices/houseSlice";
+import logger from "redux-logger";
+import houseReducer from "./house";
 
 const store = configureStore({
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
     reducer:{
-        house: houseSlice
+        house: houseReducer 
     }
 })
 
