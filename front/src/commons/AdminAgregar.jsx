@@ -1,43 +1,49 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useSelector,useDispatch } from "react-redux" 
+import { getHouseData } from "../store/house";
 
 const AdminOptions = () => {
-  const [provincia, setProvincia] = useState("");
-  const [ciudad, setCiudad] = useState("");
-  const [codigoPostal, setCodigoPostal] = useState(0);
-  const [precio, setPrecio] = useState(0);
-  const [ambientes, setAmbientes] = useState(0);
-  const [baños, setBaños] = useState(0);
-  const [habitaciones, setHabitaciones] = useState(0);
-  const [cochera, setCochera] = useState(0);
-  const [metrosCuadrados, setMetrosCuadrados] = useState(0);
-  const [fotos, setFotos] = useState("");
-  const [titulo, setTitulo] = useState("");
-  const [descripcion, setDescripcion] = useState("");
-  const [tipo, setTipo] = useState("");
-  const [pisos, setPisos] = useState(0);
+  const houseStore = useSelector((state) => console.log("ESTADO-REDUX",state.house) )
+  const [house, setHouse] = useState({
+    provincia: "",
+    ciudad: "",
+    codigoPostal: 0,
+    precio: 0,
+    ambientes: 0,
+    baños: 0,
+    habitaciones: 0,
+    cochera: 0,
+    metrosCuadrados: 0,
+    fotos: "",
+    titulo: "",
+    descripcion: "",
+    tipo: "",
+    pisos: 0,
+  });
+
+  const dispatch = useDispatch()
 
   const handleSubmit = function (e) {
     e.preventDefault();
     axios
       .post("http://localhost:3001/api/users/agregarAdm", {
-        provincia,
-        ciudad,
-        codigoPostal,
-        precio,
-        ambientes,
-        baños,
-        habitaciones,
-        cochera,
-        metrosCuadrados,
-        fotos,
-        titulo,
-        descripcion,
-        tipo,
-        pisos,
+        ...house,
       })
-      .then((casaData) => {})
+      .then((casaData) => {
+        return casaData.data})
+      .then((houseDispatch)=>{
+        console.log("HOUSEDISPATCH",houseDispatch)
+        dispatch(getHouseData({...houseDispatch}))
+      })
       .catch();
+  };
+  
+  const handleChange = (e) => {
+    setHouse({
+      ...house,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
@@ -49,11 +55,12 @@ const AdminOptions = () => {
             Provincia
           </label>
           <input
+            name="provincia"
             type="text"
+            placeholder="Ej: Buenos Aires"
             className="form-control"
             id="validationDefault01"
-            value={provincia}
-            onChange={(e) => setProvincia(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -62,11 +69,12 @@ const AdminOptions = () => {
             Ciudad
           </label>
           <input
+            name="ciduad"
             type="text"
+            placeholder="Ej: Necochea"
             className="form-control"
             id="validationDefault02"
-            value={ciudad}
-            onChange={(e) => setCiudad(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -75,11 +83,12 @@ const AdminOptions = () => {
             Codigo Postal
           </label>
           <input
+            name="codigoPostal"
             type="text"
+            placeholder="Ej: 7600"
             className="form-control"
             id="validationDefault03"
-            value={codigoPostal}
-            onChange={(e) => setCodigoPostal(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -88,11 +97,12 @@ const AdminOptions = () => {
             Precio
           </label>
           <input
+            name="precio"
             type="number"
+            placeholder="Ej: $100000"
             className="form-control"
             id="validationDefault04"
-            value={precio}
-            onChange={(e) => setPrecio(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -101,11 +111,12 @@ const AdminOptions = () => {
             Ambientes
           </label>
           <input
+            name="ambientes"
             type="number"
+            placeholder="Ej: 5"
             className="form-control"
             id="validationDefault05"
-            value={ambientes}
-            onChange={(e) => setAmbientes(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -114,11 +125,12 @@ const AdminOptions = () => {
             Baños
           </label>
           <input
+            name="baños"
             type="number"
+            placeholder="Ej: 2"
             className="form-control"
             id="validationDefault06"
-            value={baños}
-            onChange={(e) => setBaños(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -127,11 +139,12 @@ const AdminOptions = () => {
             Habitaciones
           </label>
           <input
+            name="habitaciones"
             type="number"
+            placeholder="Ej: 2"
             className="form-control"
             id="validationDefault07"
-            value={habitaciones}
-            onChange={(e) => setHabitaciones(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -140,11 +153,12 @@ const AdminOptions = () => {
             Cochera
           </label>
           <input
+            name="cochera"
             type="number"
+            placeholder="Ej: 1"
             className="form-control"
             id="validationDefault08"
-            value={cochera}
-            onChange={(e) => setCochera(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -153,11 +167,12 @@ const AdminOptions = () => {
             Metros Cuadrados
           </label>
           <input
+            name="metrosCudrados"
             type="number"
+            placeholder="Ej: 130"
             className="form-control"
             id="validationDefault09"
-            value={metrosCuadrados}
-            onChange={(e) => setMetrosCuadrados(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -166,11 +181,12 @@ const AdminOptions = () => {
             Fotos
           </label>
           <input
+            name="fotos"
             type="url"
+            placeholder="Ej: http://link.com/imagen.jpg"
             className="form-control"
             id="validationDefault10"
-            value={fotos}
-            onChange={(e) => setFotos(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -179,11 +195,12 @@ const AdminOptions = () => {
             Titulo
           </label>
           <input
+            name="titulo"
             type="text"
+            placeholder="Ej: Casa en el centro"
             className="form-control"
             id="validationDefault11"
-            value={titulo}
-            onChange={(e) => setTitulo(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -192,11 +209,12 @@ const AdminOptions = () => {
             Descripción
           </label>
           <input
+            name="descripción"
             type="text"
+            placeholder="Ej: Recien pintada,etc"
             className="form-control"
             id="validationDefault12"
-            value={descripcion}
-            onChange={(e) => setDescripcion(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -205,11 +223,12 @@ const AdminOptions = () => {
             Tipo
           </label>
           <input
+            name="tipo"
             type="text"
+            placeholder="Ej: Casa/departamento"
             className="form-control"
             id="validationDefault13"
-            value={tipo}
-            onChange={(e) => setTipo(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
@@ -218,11 +237,12 @@ const AdminOptions = () => {
             Pisos
           </label>
           <input
+            name="pisos"
             type="number"
+            placeholder="Ej: 2"
             className="form-control"
             id="validationDefault13"
-            value={pisos}
-            onChange={(e) => setPisos(e.target.value)}
+            onChange={handleChange}
             required
           />
         </div>
