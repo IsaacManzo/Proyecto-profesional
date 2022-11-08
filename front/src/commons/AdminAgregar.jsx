@@ -2,39 +2,28 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const AdminOptions = () => {
-  const [provincia, setProvincia] = useState("");
-  const [ciudad, setCiudad] = useState("");
-  const [codigoPostal, setCodigoPostal] = useState(0);
-  const [precio, setPrecio] = useState(0);
-  const [ambientes, setAmbientes] = useState(0);
-  const [baños, setBaños] = useState(0);
-  const [habitaciones, setHabitaciones] = useState(0);
-  const [cochera, setCochera] = useState(0);
-  const [metrosCuadrados, setMetrosCuadrados] = useState(0);
-  const [fotos, setFotos] = useState("");
-  const [titulo, setTitulo] = useState("");
-  const [descripcion, setDescripcion] = useState("");
-  const [tipo, setTipo] = useState("");
-  const [pisos, setPisos] = useState(0);
-
+  const [house, setHouse] =({
+    titulo:"",
+    descripcion:"",
+    provincia:"",
+    ciudad:"",
+    codigoPostal:0,
+    precio:0,
+    ambientes:1,
+    baños:1,
+    habitaciones:0,
+    cochera:0,
+    metrosCuadrados:0,
+    fotos:"",
+    tipo:"",
+    pisos:0,
+  }) 
+  
   const handleSubmit = function (e) {
     e.preventDefault();
     axios
       .post("http://localhost:3001/api/users/agregarAdm", {
-        provincia,
-        ciudad,
-        codigoPostal,
-        precio,
-        ambientes,
-        baños,
-        habitaciones,
-        cochera,
-        metrosCuadrados,
-        fotos,
-        titulo,
-        descripcion,
-        tipo,
-        pisos,
+       ...house,
       })
       .then((casaData) => {})
       .catch();
