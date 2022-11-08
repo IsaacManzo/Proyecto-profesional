@@ -4,7 +4,7 @@ import { useSelector,useDispatch } from "react-redux"
 import { getHouseData } from "../store/house";
 
 const AdminOptions = () => {
-  const houseStore = useSelector((state) => console.log("ESTADO-REDUX",state.house) )
+  const houseStore = useSelector((state) => state.house)
   const [house, setHouse] = useState({
     provincia: "",
     ciudad: "",
@@ -45,6 +45,8 @@ const AdminOptions = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+console.log(houseStore)
 
   return (
     <div>
