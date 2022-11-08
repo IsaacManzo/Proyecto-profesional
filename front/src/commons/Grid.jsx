@@ -1,36 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import "../componentsCss/Grid.css";
-import { useSelector } from "react-redux"
-
+import { useSelector } from "react-redux";
 
 const Grid = () => {
-  // const [casa, setCasa] = useState([]);
-  const navigate = useNavigate()
-  const house = useSelector((state) => state.house)
+  const navigate = useNavigate();
+  const house = useSelector((state) => state.house);
+  console.log("HOUSE-STATE", house);
 
-
-  // useEffect(() => {
-  //   axios.get("http://localhost:3001/api/users/traerAdm").then((casas) => {
-  //     setCasa(casas.data);
-  //   });
-  // }, []);
-
-const handleSubmit = function (id) {
-  id.preventdefault()
-  axios.put(`http://localhost:3001/api/users/borrarAdm/${id}`).then((res)=>(res.status)).catch()
-}
+  const handleSubmit = function (id) {
+    id.preventdefault();
+    axios
+      .put(`http://localhost:3001/api/users/borrarAdm/${id}`)
+      .then((res) => res.status)
+      .catch();
+  };
 
   return (
     <div>
       {house?.map((elemento) => (
         <div className="card" style={{ width: "18rem" }} key={elemento.id}>
-          <img
-            src={elemento.fotos}
-            className="card-img-top"
-            alt="..."
-          />
+          <img src={elemento.fotos} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{elemento.titulo}</h5>
             <p className="card-text">{elemento.descripcion}</p>
@@ -43,11 +34,19 @@ const handleSubmit = function (id) {
             <li className="list-group-item">🚗 Cochera: {elemento.cochera}</li>
             <li className="list-group-item">💲 Precio: ${elemento.precio}</li>
           </ul>
-          <div className="buttons-card" >
-            <button type="button" className="btn btn-outline-dark" onClick={()=>navigate(`/casa/${elemento.id}`)}>
+          <div className="buttons-card">
+            <button
+              type="button"
+              className="btn btn-outline-dark"
+              onClick={() => navigate(`/casa/${elemento.id}`)}
+            >
               Info
             </button>
-            <button type="button" className="btn btn-outline-danger" onClick={()=>handleSubmit(elemento.id)}>
+            <button
+              type="button"
+              className="btn btn-outline-danger"
+              onClick={() => handleSubmit(elemento.id)}
+            >
               Borrar
             </button>
           </div>
