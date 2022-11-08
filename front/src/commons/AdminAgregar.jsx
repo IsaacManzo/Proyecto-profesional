@@ -35,6 +35,7 @@ const AdminOptions = () => {
       .then((houseDispatch)=>{
         console.log("HOUSEDISPATCH",houseDispatch)
         dispatch(getHouseData({...houseDispatch}))
+
       })
       .catch();
   };
