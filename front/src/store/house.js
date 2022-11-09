@@ -14,5 +14,4 @@ const handleProduct = createSlice({
 });
 
 export const { getHouseData } = handleProduct.actions;
-
 export default handleProduct.reducer;
