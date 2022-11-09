@@ -1,13 +1,28 @@
 import { configureStore } from "@reduxjs/toolkit";
 import logger from "redux-logger";
 import houseReducer from "./house";
-import storage from "redux-persist/lib/storage"
+import storage from "redux-persist/lib/storage";
+import { persistReducer } from "redux-persist";
+import { combineReducers } from "@reduxjs/toolkit";
+import thunk from "redux-thunk";
 
-const store = configureStore({
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
-    reducer:{
-        house: houseReducer 
-    }
+const persistConfig = {
+    key: "root",
+    storage,
+    whitelist: ["houseState"]
+}
+
+const rootReducers = combineReducers({
+    houseState: houseReducer
 })
 
-export default store
+const persistedReducer = persistReducer(persistConfig, rootReducers)
+
+const store = configureStore({
+  middleware: [thunk],
+  reducer: {
+    house: persistedReducer,
+  },
+});
+
+export default store;

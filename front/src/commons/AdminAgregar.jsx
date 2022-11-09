@@ -4,7 +4,7 @@ import { useSelector,useDispatch } from "react-redux"
 import { getHouseData } from "../store/house";
 
 const AdminOptions = () => {
-  const houseStore = useSelector((state) => state.house)
+  const houseStore = useSelector((state) => console.log("STATEHOUSE", state.house))
   const [house, setHouse] = useState({
     provincia: "",
     ciudad: "",
