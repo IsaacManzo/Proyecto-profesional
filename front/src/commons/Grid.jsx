@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 const Grid = () => {
   const navigate = useNavigate();
   const house = useSelector((state) => state.house);
-  console.log("HOUSE-STATE", house);
 
   const handleSubmit = function (id) {
     id.preventdefault();
@@ -16,10 +15,11 @@ const Grid = () => {
       .then((res) => res.status)
       .catch();
   };
-
+  const dataHouse = house.houseState;
+  console.log("DATA-HOUSE",dataHouse)
   return (
     <div>
-      {house?.map((elemento) => (
+      {dataHouse?.map((elemento) => (
         <div className="card" style={{ width: "18rem" }} key={elemento.id}>
           <img src={elemento.fotos} className="card-img-top" alt="..." />
           <div className="card-body">
