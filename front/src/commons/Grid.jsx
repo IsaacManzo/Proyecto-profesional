@@ -16,6 +16,7 @@ const Grid = () => {
       .catch();
   };
   const dataHouse = house.houseState;
+  console.log(house)
   console.log("DATA-HOUSE",dataHouse)
   return (
     <div>

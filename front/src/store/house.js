@@ -10,6 +10,9 @@ const handleProduct = createSlice({
     getHouseData: (state, action) => {
       state.push(action.payload);
     },
+    deleteHouse: (state,action) => {
+      
+    }
   },
 });
 

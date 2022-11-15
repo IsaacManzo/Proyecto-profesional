@@ -1,5 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-import logger from "redux-logger";
 import houseReducer from "./house";
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
