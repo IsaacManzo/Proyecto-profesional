@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useSelector,useDispatch } from "react-redux" 
+import { useDispatch } from "react-redux" 
 import { getHouseData } from "../store/house";
 
 const AdminOptions = () => {
-  const houseStore = useSelector((state) => state.house)
   const [house, setHouse] = useState({
     provincia: "",
     ciudad: "",
@@ -47,7 +46,6 @@ const AdminOptions = () => {
     });
   };
 
-console.log(houseStore)
 
   return (
     <div>
