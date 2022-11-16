@@ -1,7 +1,7 @@
 import { createReducer, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = [];
+const initialState = {houses: {}}
 
 export const getHouse = createAsyncThunk("HOUSE", () => {
   return axios
@@ -11,11 +11,9 @@ export const getHouse = createAsyncThunk("HOUSE", () => {
 
 const HouseReducer = createReducer(initialState, {
   [getHouse.fulfilled]: (state, action) => {
-    console.log("ACTION", action);
-    state.house = action.payload
-  }
+    console.log("INITIALSTATE",initialState)
+    state.houses = action.payload;
+  },
 });
 
-
-
-export default HouseReducer
+export default HouseReducer;

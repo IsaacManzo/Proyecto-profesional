@@ -18,7 +18,7 @@ const AdminOptions = () => {
     tipo: "",
     pisos: 0,
   });
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
