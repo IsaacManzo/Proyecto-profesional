@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import * as Icons from "heroicons-react";
 import "../componentsCss/Casas.css";
 
 const Casas = () => {
@@ -15,7 +14,7 @@ const Casas = () => {
         setCasa(casas.data);
       })
       .catch();
-  }, []);
+  }, [id]);
 
   const singleCasa = [casa];
 

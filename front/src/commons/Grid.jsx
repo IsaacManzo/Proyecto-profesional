@@ -2,19 +2,17 @@ import {React, useEffect} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../componentsCss/Grid.css";
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { getHouse } from "../store/house"
 
 const Grid = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const house = useSelector((state) => state.house);
-
   useEffect(() => {
     dispatch(getHouse())
-  }, [])
+  }, [dispatch])
   
-
+const house = []
   const handleSubmit = function (id) {
     id.preventdefault();
     axios

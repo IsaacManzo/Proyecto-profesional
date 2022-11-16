@@ -17,4 +17,5 @@ const HouseReducer = createReducer(initialState, {
 });
 
 
-export default HouseReducer.reducer;
+
+export default HouseReducer

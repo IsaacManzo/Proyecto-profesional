@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux";
 
 const AdminOptions = () => {
-  const houseStore = useSelector((state) => state.house);
   const [house, setHouse] = useState({
     provincia: "",
     ciudad: "",
