@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useSelector,useDispatch } from "react-redux" 
-import { getHouseData } from "../store/house";
+import { useSelector } from "react-redux";
 
 const AdminOptions = () => {
-  const houseStore = useSelector((state) => state.house)
+  const houseStore = useSelector((state) => state.house);
   const [house, setHouse] = useState({
     provincia: "",
     ciudad: "",
@@ -22,32 +21,24 @@ const AdminOptions = () => {
     pisos: 0,
   });
 
-  const dispatch = useDispatch()
-
-  const handleSubmit = function (e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post("http://localhost:3001/api/users/agregarAdm", {
         ...house,
       })
       .then((casaData) => {
-        return casaData.data})
-      .then((houseDispatch)=>{
-        console.log("HOUSEDISPATCH",houseDispatch)
-        dispatch(getHouseData({...houseDispatch}))
-
+        return casaData.data;
       })
-      .catch();
+      .catch((err) => console.log(err));
   };
-  
+
   const handleChange = (e) => {
     setHouse({
       ...house,
       [e.target.name]: e.target.value,
     });
   };
-
-console.log(houseStore)
 
   return (
     <div>
