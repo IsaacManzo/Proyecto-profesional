@@ -1,18 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createReducer, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = [];
 
-const handleProduct = createSlice({
-  name: "house",
-  initialState,
-
-  reducers: {
-    getHouseData: (state, action) => {
-      state.push(action.payload);
-    },
-  },
+export const getHouse = createAsyncThunk("HOUSE", () => {
+  return axios
+    .get("http://localhost:3001/api/users/traerAdm")
+    .then((res) => res.data);
 });
 
-export const { getHouseData } = handleProduct.actions;
+const HouseReducer = createReducer(initialState, {
+  [getHouse.fulfilled]: (state, action) => {
+    console.log("ACTION", action);
+    state.house = action.payload
+  }
+});
 
-export default handleProduct.reducer;
+
+export default HouseReducer.reducer;
