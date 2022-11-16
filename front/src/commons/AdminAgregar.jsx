@@ -18,19 +18,18 @@ const AdminOptions = () => {
     tipo: "",
     pisos: 0,
   });
-  
-  const handleSubmit = (e) => {
+
+  const handleSubmit = function (e) {
     e.preventDefault();
     axios
       .post("http://localhost:3001/api/users/agregarAdm", {
         ...house,
       })
       .then((casaData) => {
-        return casaData.data;
-      })
-      .catch((err) => console.log(err));
+        return casaData.data})
+      .catch();
   };
-
+  
   const handleChange = (e) => {
     setHouse({
       ...house,
