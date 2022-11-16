@@ -2,17 +2,18 @@ import {React, useEffect} from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../componentsCss/Grid.css";
-import {  useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getHouse } from "../store/house"
 
 const Grid = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const house = useSelector((state) => {return state.house.houses});
+console.log(house)
   useEffect(() => {
     dispatch(getHouse())
   }, [dispatch])
   
-const house = []
   const handleSubmit = function (id) {
     id.preventdefault();
     axios
@@ -23,7 +24,7 @@ const house = []
 
   return (
     <div>
-      {house?.map((elemento) => (
+      {[].map((elemento) => (
         <div className="card" style={{ width: "18rem" }} key={elemento.id}>
           <img src={elemento.fotos} className="card-img-top" alt="..." />
           <div className="card-body">
