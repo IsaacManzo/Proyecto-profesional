@@ -19,12 +19,12 @@ console.log(house)
     axios
       .put(`http://localhost:3001/api/users/borrarAdm/${id}`)
       .then((res) => res.status)
-      .catch();
+      .catch((err) => console.log(err));
   };
 
   return (
     <div>
-      {[].map((elemento) => (
+      {house?.map((elemento) => (
         <div className="card" style={{ width: "18rem" }} key={elemento.id}>
           <img src={elemento.fotos} className="card-img-top" alt="..." />
           <div className="card-body">
