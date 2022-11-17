@@ -9,7 +9,7 @@ const Grid = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const house = useSelector((state) => {return state.house.houses});
-console.log(house)
+
   useEffect(() => {
     dispatch(getHouse())
   }, [dispatch])
@@ -17,11 +17,11 @@ console.log(house)
   const handleSubmit = function (id) {
     id.preventdefault();
     axios
-      .put(`http://localhost:3001/api/users/borrarAdm/${id}`)
-      .then((res) => res.status)
-      .catch((err) => console.log(err));
+    .put(`http://localhost:3001/api/users/borrarAdm/${id}`)
+    .then((res) => res.status)
+    .catch((err) => console.log(err));
   };
-
+  
   return (
     <div>
       {house?.map((elemento) => (

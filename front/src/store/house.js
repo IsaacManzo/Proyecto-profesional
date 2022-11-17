@@ -1,7 +1,7 @@
 import { createReducer, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = {houses: {}}
+const initialState = {houses: []}
 
 export const getHouse = createAsyncThunk("HOUSE", () => {
   return axios
