@@ -11,7 +11,6 @@ export const getHouse = createAsyncThunk("HOUSE", () => {
 
 const HouseReducer = createReducer(initialState, {
   [getHouse.fulfilled]: (state, action) => {
-    console.log("INITIALSTATE",initialState)
     state.houses = action.payload;
   },
 });

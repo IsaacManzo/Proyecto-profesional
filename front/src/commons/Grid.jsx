@@ -15,13 +15,15 @@ const Grid = () => {
   }, [dispatch])
   
   const handleSubmit = function (id) {
-    id.preventdefault();
+    console.log(id)
     axios
     .put(`http://localhost:3001/api/users/borrarAdm/${id}`)
     .then((res) => res.status)
     .catch((err) => console.log(err));
   };
   
+console.log('HOSE-GRID',house)
+
   return (
     <div>
       {house?.map((elemento) => (
