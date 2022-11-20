@@ -1,67 +1,34 @@
 import React from "react";
 import "animate.css";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-          <Link to={"/"}>
-        {/* <a className="navbar-brand animate__animated animate__flipInX"> */}
             <h3>
               <b>Antezana</b> <font color="grey">inmobiliaria</font>
             </h3>
-        {/* </a> */}
-          </Link>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/home">
+              <a className="nav-link active" aria-current="page" href="/">
                 <b>Home</b>
               </a>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item">
               <a
-                className="nav-link dropdown-toggle"
-                href="#"
+                className="nav-link"
+                href="/grid"
                 role="button"
-                data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 <font color="grey">Propiedades</font>
               </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="/grid">
-                    <font color="grey">Casa</font>
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/grid">
-                    <font color="grey">Duplex</font>
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/grid">
-                    <font color="grey">Departamento</font>
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/grid">
-                    <font color="grey">Oficina</font>
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/grid">
-                    <font color="grey">Local</font>
-                  </a>
-                </li>
-              </ul>
             </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
+                href="/"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
